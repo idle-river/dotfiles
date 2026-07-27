@@ -1,5 +1,5 @@
 {
-  description = "Maaz Macbook Darwin";
+  description = "Macbook Darwin";
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
