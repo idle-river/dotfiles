@@ -63,6 +63,7 @@ in
     delve
     air
     bun
+    parallel
 
     inputs.silicate.packages.${system}.default
     inputs.herdr.packages.${system}.default
