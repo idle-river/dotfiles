@@ -64,6 +64,8 @@ in
     air
     bun
     parallel
+    trunk
+    cargo-generate
 
     inputs.silicate.packages.${system}.default
     inputs.herdr.packages.${system}.default
