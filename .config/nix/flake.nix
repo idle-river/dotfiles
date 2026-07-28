@@ -16,7 +16,7 @@
     };
 
     fast = {
-      url = "github:GitanElyon/fast";
+      url = "github:maaslalani/fast";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 

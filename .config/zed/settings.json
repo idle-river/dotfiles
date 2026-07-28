@@ -43,20 +43,26 @@
   "buffer_font_family": "JetBrains Mono NL",
   "file_types": {
     "json": [
+      "flake.lock",
       "flake.lock"
     ],
     "dotenv": [
+      ".env*",
       ".env*"
     ]
   },
   "auto_indent_on_paste": true,
   "format_on_save": "on",
-  "icon_theme": "Zed (Default)",
+  "icon_theme": {
+    "mode": "dark",
+    "light": "Catppuccin Mocha",
+    "dark": "Catppuccin Mocha"
+  },
   "ui_font_size": 16,
   "buffer_font_size": 16.0,
   "theme": {
     "mode": "dark",
     "light": "One Light",
-    "dark": "Ayu Dark",
+    "dark": "Tokyo Night",
   },
 }

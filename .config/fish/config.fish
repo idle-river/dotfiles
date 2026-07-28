@@ -14,7 +14,7 @@ if status is-interactive
     alias cat=/run/current-system/sw/bin/bat
     alias ocat=/bin/cat
     alias docker=podman
-    alias ls='/run/current-system/sw/bin/eza --icons'
+    alias ls='/run/current-system/sw/bin/eza --icons always'
     alias ols=/bin/ls
     alias kubectx='kubectl config use-context'
 
