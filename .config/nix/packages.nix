@@ -44,6 +44,7 @@ in
     tmux
     unzip
     wakeonlan
+    python3
     wget
     xh
     xz
