@@ -7,7 +7,7 @@
       "sevenzip"
     ];
     casks = [
-      "TheBoredTeam/boring-notch/boring-notch"
+      "theboredteam/boring-notch/boring-notch"
       "darrylmorley/whatcable/whatcable"
       "jordanbaird-ice"
       "podman-desktop"
