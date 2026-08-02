@@ -19,7 +19,6 @@
       "presentify"
       "appcleaner"
       "localsend"
-      "wallspace"
       "moonlight"
       "rustdesk"
       "cotypist"
