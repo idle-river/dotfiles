@@ -46,6 +46,7 @@ in
     starship
     stow
     tmux
+    typescript-go
     unzip
     wakeonlan
     python3
