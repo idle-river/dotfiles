@@ -16,7 +16,7 @@
         "/System/Applications/Apps.app"
         "/Applications/Ghostty.app"
         "/Applications/Nix Apps/Helium.app"
-        "/Applications/Zed.app"
+        "/Applications/Nix Apps/Zed.app"
       ];
     };
     finder = {

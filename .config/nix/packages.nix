@@ -1,6 +1,10 @@
 { inputs, pkgs, ... }:
 let
   system = pkgs.stdenv.hostPlatform.system;
+  zedCompat = pkgs.runCommand "zed-compat" { } ''
+    mkdir -p "$out/bin"
+    ln -s "${pkgs.zed-editor}/bin/zeditor" "$out/bin/zed"
+  '';
 in
 {
   environment.systemPackages = with pkgs; [
@@ -67,6 +71,8 @@ in
     parallel
     trunk
     cargo-generate
+    zed-editor
+    zedCompat
 
     inputs.silicate.packages.${system}.default
     inputs.herdr.packages.${system}.default
