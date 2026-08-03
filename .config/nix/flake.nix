@@ -29,6 +29,11 @@
       url = "git+https://gitea.maariz.org/pure_sagacity/clonee";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    helium = {
+      url = "github:schembriaiden/helium-browser-nix-flake";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
@@ -39,6 +44,7 @@
       clonee,
       herdr,
       fast,
+      helium,
       nix-darwin,
       nix-homebrew,
     }:

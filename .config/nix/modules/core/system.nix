@@ -15,8 +15,8 @@
       persistent-apps = [
         "/System/Applications/Apps.app"
         "/Applications/Ghostty.app"
-        "/Applications/Brave Browser.app"
-        "/Applications/Visual Studio Code - Insiders.app"
+        "/Applications/Nix Apps/Helium.app"
+        "/Applications/Zed.app"
       ];
     };
     finder = {
