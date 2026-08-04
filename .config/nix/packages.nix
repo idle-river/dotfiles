@@ -8,6 +8,8 @@ let
 in
 {
   environment.systemPackages = with pkgs; [
+    bitwarden-cli
+    bitwarden-desktop
     pay-respects
     mosh
     doggo
