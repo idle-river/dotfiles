@@ -60,6 +60,9 @@ export CPM_SOURCE_CACHE="/Users/Maaz/.cache/cpm_cache"
 export VCPKG_ROOT="$HOME/vcpkg"
 export PATH="$VCPKG_ROOT:$PATH"
 
+# Bitwarden SSH Agent
+set -gx SSH_AUTH_SOCK /Users/Maaz/.bitwarden-ssh-agent.sock
+
 set -gx GPG_TTY (tty)
 
 set -gx PATH (brew --prefix rustup)/bin "$HOME/.cargo/bin" $PATH
