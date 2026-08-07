@@ -82,5 +82,6 @@ in
     inputs.clonee.packages.${system}.default
     inputs.fast.packages.${system}.default
     inputs.helium.packages.${system}.default
+    inputs.tableplus.packages.${system}.default
   ];
 }

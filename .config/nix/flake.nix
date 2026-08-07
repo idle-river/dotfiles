@@ -34,6 +34,8 @@
       url = "github:schembriaiden/helium-browser-nix-flake";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    tableplus.url = "github:anaclumos/tableplus.nix";
   };
 
   outputs =

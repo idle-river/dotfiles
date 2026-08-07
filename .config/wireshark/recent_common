@@ -1,4 +1,4 @@
-# Common recent settings file for Wireshark 4.6.6.
+# Common recent settings file for Wireshark 4.6.7.
 #
 # This file is regenerated each time Wireshark is quit
 # and when changing configuration profile.
@@ -9,9 +9,16 @@
 
 ######## Recent capture filters (latest first), cannot be altered through command line ########
 
+recent.capture_filter: dns.a == 0.0.0.0
+recent.capture_filter: dns.qry.name == "0.0.0.0"
+recent.capture_filter: dns.qry.name == 0.0.0.0
+recent.capture_filter: dns.qry.name == 1.1.1.1.
+recent.capture_filter.en0: dns.qry.name == 1.1.1.1.
 
 ######## Recent display filters (latest last), cannot be altered through command line ########
 
+recent.display_filter: dns.a == 0.0.0.0
+recent.display_filter: dns.qry.name == 0.0.0.0
 recent.display_filter: dns
 
 # Main window geometry.
