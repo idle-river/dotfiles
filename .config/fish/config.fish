@@ -72,3 +72,6 @@ export PATH="/opt/homebrew/bin:$PATH"
 set -gx HOMEBREW_NO_ENV_HINTS 1
 
 set -gx EDITOR nvim
+
+# SSH Terminal Thing
+set -gx TERM xterm-256color
