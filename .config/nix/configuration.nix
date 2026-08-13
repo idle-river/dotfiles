@@ -11,5 +11,6 @@
     enable = true;
     rust.enable = true;
     c.enable = true;
+    arduino.enable = true;
   };
 }

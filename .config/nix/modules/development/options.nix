@@ -8,5 +8,7 @@ with lib;
     rust.enable = mkEnableOption "Rust development tools and environment";
 
     c.enable = mkEnableOption "C/C++ development tools";
+
+    arduino.enable = mkEnableOption "Arduino development IDE and CLI";
   };
 }
