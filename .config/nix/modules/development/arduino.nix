@@ -9,10 +9,10 @@ let
   cfg = config.macbook.development;
 in
 {
-  config = lib.mkIf (cfg.enable && cfg.c.enable) {
+  # Have to install the IDE seperately
+  config = lib.mkIf (cfg.enable && cfg.arduino.enable) {
     environment.systemPackages = with pkgs; [
       arduino-cli
-      arduino-ide
       arduino-language-server
     ];
   };
