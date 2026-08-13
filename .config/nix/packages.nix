@@ -5,6 +5,10 @@ let
     mkdir -p "$out/bin"
     ln -s "${pkgs.zed-editor}/bin/zeditor" "$out/bin/zed"
   '';
+  tableplus = (
+    inputs.tableplus.packages.${system}.default or inputs.tableplus.defaultPackage.${system}
+      or pkgs.tableplus
+  );
 in
 {
   environment.systemPackages = with pkgs; [
@@ -13,41 +17,26 @@ in
     pay-respects
     mosh
     doggo
-    nixfmt
-    nixfmt-tree
-    fzf
-    bat
     devenv
     carapace
-    cmake
     cmatrix
     podman
     podman-compose
-    eza
     fastfetch
-    fd
     ffmpeg
     fish
-    gcc
     gnupg
     kubernetes-helm
     helmfile
     kubectl
     lima
     minikube
-    nasm
-    neovim
-    ninja
     nodejs
     openssh
     openssl
     qemu
-    ripgrep
-    rustup
     sqlite
-    starship
     stow
-    tmux
     typescript-go
     unzip
     wakeonlan
@@ -57,12 +46,9 @@ in
     xz
     yazi
     yt-dlp
-    zoxide
     caddy
-    nixd
     doppler
     tea
-    jujutsu
     pass
     secretspec
     opencode
@@ -73,15 +59,20 @@ in
     bun
     parallel
     trunk
-    cargo-generate
     zed-editor
     zedCompat
+    ripgrep
+    fzf
+    eza
+    zoxide
+    bat
+    starship
+    tableplus
 
     inputs.silicate.packages.${system}.default
     inputs.herdr.packages.${system}.default
     inputs.clonee.packages.${system}.default
     inputs.fast.packages.${system}.default
     inputs.helium.packages.${system}.default
-    inputs.tableplus.packages.${system}.default
   ];
 }

@@ -42,4 +42,8 @@
     onActivation.autoUpdate = true;
     onActivation.upgrade = true;
   };
+
+  environment.variables = {
+    HOMEBREW_NO_ENV_HINTS = 1;
+  };
 }

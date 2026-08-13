@@ -35,7 +35,10 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    tableplus.url = "github:anaclumos/tableplus.nix";
+    tableplus = {
+      url = "github:anaclumos/tableplus.nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
@@ -49,6 +52,7 @@
       helium,
       nix-darwin,
       nix-homebrew,
+      ...
     }:
     {
       darwinConfigurations."MacBook-Pro" = nix-darwin.lib.darwinSystem {
