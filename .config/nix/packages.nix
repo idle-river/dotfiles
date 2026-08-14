@@ -68,6 +68,7 @@ in
     bat
     starship
     tableplus
+    gping
 
     inputs.silicate.packages.${system}.default
     inputs.herdr.packages.${system}.default

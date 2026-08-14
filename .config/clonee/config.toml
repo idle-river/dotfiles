@@ -3,3 +3,9 @@ type = "gitea"
 friendly_name = "Gitea"
 base_url = "https://gitea.maariz.org"
 username = "pure_sagacity"
+ssh_url = "git@ssh.maariz.org"
+
+[[provider]]
+type = "github"
+friendly_name = "Github (Personal)"
+username = "pure-sagacity"
