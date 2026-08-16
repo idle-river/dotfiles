@@ -37,8 +37,6 @@
       nixpkgs,
       silicate,
       clonee,
-      herdr,
-      fast,
       helium,
       nix-darwin,
       nix-homebrew,
