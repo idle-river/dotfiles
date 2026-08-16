@@ -10,16 +10,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    herdr = {
-      url = "github:ogulcancelik/herdr";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
-    fast = {
-      url = "github:maaslalani/fast";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
     silicate = {
       url = "github:pure-sagacity/silicate";
       inputs.nixpkgs.follows = "nixpkgs";

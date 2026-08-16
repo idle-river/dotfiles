@@ -54,11 +54,9 @@ in
     opencode
     go
     gopls
-    delve
     air
     bun
     parallel
-    trunk
     zed-editor
     zedCompat
     ripgrep
@@ -68,12 +66,11 @@ in
     bat
     starship
     tableplus
-    gping
+    herdr
+    fast
 
     inputs.silicate.packages.${system}.default
-    inputs.herdr.packages.${system}.default
     inputs.clonee.packages.${system}.default
-    inputs.fast.packages.${system}.default
     inputs.helium.packages.${system}.default
   ];
 }
