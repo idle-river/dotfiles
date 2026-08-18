@@ -7,6 +7,7 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "mouse_wheel_zoom": true,
   "format_on_save": "on",
   "disable_ai": true,
   "project_panel": {
@@ -18,7 +19,7 @@
     "anthropic_retention": false
   },
   "icon_theme": "Catppuccin Mocha",
-  "ui_font_size": 16,
+  "ui_font_size": 19.0,
   "buffer_font_size": 15,
   "theme": {
     "mode": "dark",

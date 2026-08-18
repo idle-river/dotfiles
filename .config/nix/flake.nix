@@ -20,6 +20,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    aegis = {
+      url = "git+https://gitea.maariz.org/pure_sagacity/aegis";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     helium = {
       url = "github:schembriaiden/helium-browser-nix-flake";
       inputs.nixpkgs.follows = "nixpkgs";
