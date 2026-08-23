@@ -68,6 +68,7 @@ in
     tableplus
     herdr
     fast
+    nil # idk why we need this
 
     inputs.silicate.packages.${system}.default
     inputs.clonee.packages.${system}.default

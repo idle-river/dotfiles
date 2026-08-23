@@ -17,7 +17,8 @@
     "alexi.build",
     "mbuvarp",
     "frederik_obe",
-    "bsradcliffe"
+    "bsradcliffe",
+    "aditi_bhagat"
   ],
   "pastContributors": [
     "Visual-Studio-Coder"
@@ -127,7 +128,7 @@
       "title": "Caffeinate Status",
       "description": "Show the current caffeination status",
       "mode": "no-view",
-      "interval": "15s"
+      "interval": "1m"
     }
   ],
   "tools": [
@@ -351,6 +352,10 @@
     "fix-lint": "ray lint --fix",
     "lint": "ray lint",
     "publish": "npx @raycast/api@latest publish"
+  },
+  "overrides": {
+    "brace-expansion": "5.0.9",
+    "js-yaml@4": "4.3.1"
   },
   "ai": {
     "instructions": "Help users manage their Mac's sleep prevention (caffeination).\n\nCheck the current status with check-caffeination-status before starting or stopping caffeination. Status-only questions need no other tool.\n\nTool selection guide:\n- User wants indefinite caffeination → use caffeinate\n- User specifies a duration → use caffeinate-for\n- User specifies an end date or time → use caffeinate-until with an ISO 8601 date and time, including the local UTC offset when known\n- User wants to caffeinate while an app runs → use caffeinate-while-app-is-running\n- User wants to create or replace recurring schedules → use schedule-caffeination\n- User wants to see recurring schedules → use list-caffeination-schedules\n- User wants to pause, resume, or delete a recurring schedule → call list-caffeination-schedules first, then use manage-caffeination-schedule with the matching day\n- User wants to stop caffeination → use decaffeinate. If a schedule is actively running, explain that it must be paused or deleted instead\n\nWhen confirming actions, mention the specific duration, end time, application, or schedule as applicable.\n",

@@ -9,7 +9,7 @@
 {
   "mouse_wheel_zoom": true,
   "format_on_save": "on",
-  "disable_ai": true,
+  "disable_ai": false,
   "project_panel": {
     "dock": "left"
   },
