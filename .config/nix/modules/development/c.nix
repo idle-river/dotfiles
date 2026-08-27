@@ -23,6 +23,7 @@ in
     (lib.mkIf cfg.c.gui.enable {
       environment.systemPackages = with pkgs; [
         glfw
+      ] ++ lib.optionals stdenv.hostPlatform.isLinux [
         libGL
       ];
     })

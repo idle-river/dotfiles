@@ -10,7 +10,10 @@
   macbook.development = {
     enable = true;
     rust.enable = true;
-    c.enable = true;
+    c = {
+      enable = true;
+      gui.enable = true;
+    };
     arduino.enable = true;
   };
 }
