@@ -54,7 +54,9 @@ function request(method, params) {
     return Promise.resolve();
   }
 
-  const requestId = `${SOURCE}:${Date.now()}:${Math.floor(Math.random() * 1_000_000)
+  const requestId = `${SOURCE}:${Date.now()}:${Math.floor(
+    Math.random() * 1_000_000,
+  )
     .toString()
     .padStart(6, "0")}`;
   const request = {

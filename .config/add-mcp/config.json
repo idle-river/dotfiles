@@ -1,7 +1,4 @@
 {
   "version": 1,
-  "lastSelectedAgents": [
-    "claude-code",
-    "vscode"
-  ]
+  "lastSelectedAgents": ["claude-code", "vscode"]
 }
