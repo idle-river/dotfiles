@@ -9,17 +9,17 @@
         ]
       },
       "locked": {
-        "lastModified": 1787024844,
-        "narHash": "sha256-T0UIJ/kMdjH/vVRNvtYjX+hE0Ut/fPcy2/n58wBGQCw=",
-        "ref": "refs/heads/main",
-        "rev": "ff68008f9c3cb3b9a71dfcbcddd6204250663aa9",
-        "revCount": 7,
-        "type": "git",
-        "url": "https://gitea.maariz.org/pure_sagacity/aegis"
+        "lastModified": 1787026184,
+        "narHash": "sha256-2VssmRTmFfF25+f4aFPgAVlMBIrL+kpKxrIeo+RAKeI=",
+        "owner": "idle-river",
+        "repo": "aegis",
+        "rev": "de9006879aed83beff0d67c113a5138633db2124",
+        "type": "github"
       },
       "original": {
-        "type": "git",
-        "url": "https://gitea.maariz.org/pure_sagacity/aegis"
+        "owner": "idle-river",
+        "repo": "aegis",
+        "type": "github"
       }
     },
     "brew-src": {
@@ -161,15 +161,15 @@
       "locked": {
         "lastModified": 1786859387,
         "narHash": "sha256-hKML6YK+D8zI4SX+/uN/4x8Wn5q/lmOjEG2fvZgMfIA=",
-        "ref": "refs/heads/main",
+        "owner": "idle-river",
+        "repo": "clonee",
         "rev": "ed6a0f80c3e48056090c1052e71c038a3e3800e2",
-        "revCount": 15,
-        "type": "git",
-        "url": "https://gitea.maariz.org/pure_sagacity/clonee"
+        "type": "github"
       },
       "original": {
-        "type": "git",
-        "url": "https://gitea.maariz.org/pure_sagacity/clonee"
+        "owner": "idle-river",
+        "repo": "clonee",
+        "type": "github"
       }
     },
     "crate2nix": {
@@ -1237,13 +1237,13 @@
       "locked": {
         "lastModified": 1785303767,
         "narHash": "sha256-nU9EO9rKMm4FVjFIlkkwqGoikdd/6iYhGR3FM1Ddvuo=",
-        "owner": "pure-sagacity",
+        "owner": "idle-river",
         "repo": "silicate",
         "rev": "4421810236975818cfeaa10bcb79ca88521452e3",
         "type": "github"
       },
       "original": {
-        "owner": "pure-sagacity",
+        "owner": "idle-river",
         "repo": "silicate",
         "type": "github"
       }

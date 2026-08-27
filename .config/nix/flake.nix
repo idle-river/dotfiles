@@ -11,17 +11,17 @@
     };
 
     silicate = {
-      url = "github:pure-sagacity/silicate";
+      url = "github:idle-river/silicate";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
     clonee = {
-      url = "git+https://gitea.maariz.org/pure_sagacity/clonee";
+      url = "github:idle-river/clonee";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
     aegis = {
-      url = "git+https://gitea.maariz.org/pure_sagacity/aegis";
+      url = "github:idle-river/aegis";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
