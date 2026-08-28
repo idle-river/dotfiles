@@ -48,7 +48,7 @@ in
     yt-dlp
     caddy
     doppler
-    tea
+    gh
     pass
     secretspec
     opencode
