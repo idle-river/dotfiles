@@ -49,6 +49,7 @@ in
     caddy
     doppler
     gh
+    raycast
     pass
     secretspec
     opencode
