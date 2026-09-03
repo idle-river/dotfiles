@@ -34,6 +34,11 @@
       url = "github:anaclumos/tableplus.nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    sonara = {
+      url = "github:idle-river/sonora";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
@@ -43,6 +48,7 @@
       silicate,
       clonee,
       helium,
+      sonara,
       nix-darwin,
       nix-homebrew,
       ...

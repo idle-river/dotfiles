@@ -75,5 +75,6 @@ in
     inputs.clonee.packages.${system}.default
     inputs.aegis.packages.${system}.default
     inputs.helium.packages.${system}.default
+    inputs.sonara.packages.${system}.default
   ];
 }
