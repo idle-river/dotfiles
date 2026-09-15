@@ -29,11 +29,7 @@
       "vesktop"
       "ghostty"
       "cursor"
-      "bruno"
-      "slack"
       "yoink"
-      "iina"
-      "rar"
     ];
     # Auto deletes any brews/casks that are not specified in the configuration
     onActivation.cleanup = "zap";

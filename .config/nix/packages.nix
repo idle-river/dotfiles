@@ -60,6 +60,10 @@ in
     parallel
     zed-editor
     zedCompat
+    iina
+    rar
+    slack
+    bruno
     ripgrep
     fzf
     eza
