@@ -37,7 +37,7 @@ in
     qemu
     sqlite
     stow
-    typescript-go
+    typescript
     unzip
     wakeonlan
     python3
