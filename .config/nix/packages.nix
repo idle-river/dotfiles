@@ -85,7 +85,6 @@ in
     moonlight
     wireshark
     whatcable
-    boring
     appcleaner
     tailscale
     tailscale-gui
