@@ -1235,11 +1235,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1788419040,
-        "narHash": "sha256-Itdv4WV5z+U0VpseZ/f4uvYmULVPxsV3Hc2l9HrCyY4=",
+        "lastModified": 1789196581,
+        "narHash": "sha256-yJr1Bt4fKkKIpPYbsKGqJ0VFdoDnURgRwuffmBQ2WzY=",
         "owner": "oxalica",
         "repo": "rust-overlay",
-        "rev": "1af4dd0db58d4adde06f0840ce28da90f9c66c50",
+        "rev": "228ecefb6329d5a531b77b46b581a2f0c26ee056",
         "type": "github"
       },
       "original": {
@@ -1278,15 +1278,15 @@
         "rust-overlay": "rust-overlay_4"
       },
       "locked": {
-        "lastModified": 1788707103,
-        "narHash": "sha256-gWVbrP34QgyLAmzyHcQE8pYyGeHU74ixBPSD5jsVtds=",
-        "owner": "idle-river",
+        "lastModified": 1789459234,
+        "narHash": "sha256-dALUdCMe45VohQ0CiYa3AzTwu5+MOaN4jFemzYOKElc=",
+        "owner": "nolight132",
         "repo": "sonora",
-        "rev": "abdca6d21bd966980056699be30339cb6e1a59a7",
+        "rev": "1f27f5946c696c5bd5d58381249dc954a909b57d",
         "type": "github"
       },
       "original": {
-        "owner": "idle-river",
+        "owner": "nolight132",
         "repo": "sonora",
         "type": "github"
       }

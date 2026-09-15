@@ -36,7 +36,7 @@
     };
 
     sonara = {
-      url = "github:idle-river/sonora";
+      url = "github:nolight132/sonora";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
