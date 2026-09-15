@@ -8,16 +8,9 @@
     ];
     casks = [
       "theboredteam/boring-notch/boring-notch"
-      "darrylmorley/whatcable/whatcable"
-      "jordanbaird-ice"
-      "podman-desktop"
-      "tailscale-app"
-      "wireshark-app"
       "superwhisper"
-      "copilot-cli"
       "tunnelblick"
       "presentify"
-      "appcleaner"
       "cotypist"
       "ghostty"
       "cursor"

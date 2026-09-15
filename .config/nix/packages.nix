@@ -22,6 +22,8 @@ in
     cmatrix
     podman
     podman-compose
+    podman-desktop
+    podman-tui
     fastfetch
     ffmpeg
     fish
@@ -81,6 +83,12 @@ in
     tigervnc
     localsend
     moonlight
+    wireshark
+    whatcable
+    boring
+    appcleaner
+    tailscale
+    tailscale-gui
 
     inputs.silicate.packages.${system}.default
     inputs.clonee.packages.${system}.default
