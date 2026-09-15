@@ -70,6 +70,7 @@ in
     herdr
     fast
     nil # idk why we need this
+    aria2
 
     inputs.silicate.packages.${system}.default
     inputs.clonee.packages.${system}.default
