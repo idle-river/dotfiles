@@ -75,6 +75,12 @@ in
     fast
     nil # idk why we need this
     aria2
+    vesktop
+    element-desktop
+    aldente
+    tigervnc
+    localsend
+    moonlight
 
     inputs.silicate.packages.${system}.default
     inputs.clonee.packages.${system}.default

@@ -18,18 +18,11 @@
       "tunnelblick"
       "presentify"
       "appcleaner"
-      "localsend"
-      "moonlight"
-      "rustdesk"
       "cotypist"
-      "openclaw"
-      "tigervnc"
-      "element"
-      "aldente"
-      "vesktop"
       "ghostty"
       "cursor"
       "yoink"
+      "rustdesk"
     ];
     # Auto deletes any brews/casks that are not specified in the configuration
     onActivation.cleanup = "zap";
