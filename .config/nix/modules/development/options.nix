@@ -12,6 +12,8 @@ with lib;
       gui.enable = mkEnableOption "C/C++ GUI app tools";
     };
 
+    python.enable = mkEnableOption "Python development tools";
+
     arduino.enable = mkEnableOption "Arduino development IDE and CLI";
   };
 }

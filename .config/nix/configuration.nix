@@ -14,6 +14,7 @@
       enable = true;
       gui.enable = true;
     };
+    python.enable = true;
     arduino.enable = true;
   };
 }

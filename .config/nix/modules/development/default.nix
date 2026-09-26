@@ -7,5 +7,6 @@
     ./rust.nix
     ./c.nix
     ./arduino.nix
+    ./python.nix
   ];
 }
