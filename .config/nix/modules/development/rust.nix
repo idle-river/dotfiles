@@ -1,4 +1,9 @@
-{ lib, pkgs, config, ... }:
+{
+  lib,
+  pkgs,
+  config,
+  ...
+}:
 
 let
   cfg = config.macbook.development;
@@ -11,7 +16,6 @@ in
 
     environment.systemPackages = with pkgs; [
       rustup
-      cargo-generate
     ];
   };
 }
