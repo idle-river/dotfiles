@@ -8,5 +8,6 @@
     ./c.nix
     ./arduino.nix
     ./python.nix
+    ./zig.nix
   ];
 }

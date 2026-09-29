@@ -10,11 +10,12 @@
   macbook.development = {
     enable = true;
     rust.enable = true;
+    zig.enable = true;
     c = {
       enable = true;
-      gui.enable = true;
+      gui.enable = false;
     };
-    python.enable = true;
-    arduino.enable = true;
+    python.enable = false;
+    arduino.enable = false;
   };
 }

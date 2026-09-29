@@ -9,14 +9,11 @@ let
   cfg = config.macbook.development;
 in
 {
-  config = lib.mkIf (cfg.enable && cfg.python.enable) {
+  config = lib.mkIf (cfg.enable && cfg.zig.enable) {
     environment.systemPackages = with pkgs; [
-      uv
-      ruff
-      black
-      sphinx
-      python3
-      basedpyright
+      zig
+      zls
+      pkg-config
     ];
   };
 }

@@ -6,6 +6,7 @@ with lib;
     enable = mkEnableOption "development tooling";
 
     rust.enable = mkEnableOption "Rust development tools and environment";
+    zig.enable = mkEnableOption "Zig development tools";
 
     c = {
       enable = mkEnableOption "C/C++ development tools";
