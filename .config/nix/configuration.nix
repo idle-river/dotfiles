@@ -10,7 +10,7 @@
   macbook.development = {
     enable = true;
     rust.enable = true;
-    zig.enable = true;
+    zig.enable = false;
     c = {
       enable = true;
       gui.enable = false;
