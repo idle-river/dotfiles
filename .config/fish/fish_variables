@@ -1,4 +1,4 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
 SETUVAR __fish_initialized:4300
-SETUVAR --export fish_user_paths:/run/current\x2dsystem/sw/bin\x1e/nix/var/nix/profiles/default/bin\x1e/opt/homebrew/opt/llvm/bin
+SETUVAR --export fish_user_paths:/opt/homebrew/bin\x1e/Users/Maaz/\x2ecargo/bin\x1e/Users/Maaz/\x2elocal/bin\x1e/run/current\x2dsystem/sw/bin\x1e/nix/var/nix/profiles/default/bin\x1e/opt/homebrew/opt/llvm/bin

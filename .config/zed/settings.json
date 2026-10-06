@@ -7,6 +7,22 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "edit_predictions": {
+    "mode": "subtle"
+  },
+  "show_edit_predictions": false,
+  "agent": {
+    "default_model": {
+      "provider": "openai",
+      "model": "gpt-5.3-codex",
+      "enable_thinking": true,
+      "effort": "medium"
+    },
+    "flexible": true,
+    "favorite_models": [],
+    "model_parameters": []
+  },
+  "diff_view_style": "unified",
   "lsp": {
     "vtsls": {
       "settings": {
