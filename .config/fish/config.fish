@@ -73,3 +73,6 @@ set -gx TERM xterm-256color
 
 # Homebrew Environment
 eval (/opt/homebrew/bin/brew shellenv fish)
+
+# Debug Server Binary
+fish_add_path "/Applications/Xcode.app/Contents/SharedFrameworks/LLDB.framework/Versions/A/Resources"

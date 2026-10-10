@@ -8,19 +8,69 @@
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
   "edit_predictions": {
-    "mode": "subtle"
+    "mode": "subtle",
   },
   "show_edit_predictions": false,
   "agent": {
+    "default_profile": "write",
+    "profiles": {
+      "ask": {
+        "name": "Ask",
+        "tools": {},
+        "enable_all_context_servers": false,
+        "context_servers": {}
+      },
+      "plan": {
+        "default_model": {
+          "provider": "openai",
+          "model": "gpt-5.6-sol",
+          "enable_thinking": true,
+          "effort": "low"
+        },
+        "name": "Plan",
+        "tools": {
+          "write_file": false,
+          "terminal": false,
+          "spawn_agent": true,
+          "skill": true,
+          "read_file": true,
+          "list_directory": true,
+          "grep": true,
+          "find_path": true,
+          "fetch": true,
+          "diagnostics": true,
+          "ask_user": true
+        },
+        "enable_all_context_servers": false,
+        "context_servers": {}
+      }
+    },
+    "tool_permissions": {
+      "tools": {
+        "terminal": {
+          "always_allow": [
+            {
+              "pattern": "^cargo\\s+build(\\s|$)",
+            },
+            {
+              "pattern": "^cargo\\s+test(\\s|$)",
+            },
+            {
+              "pattern": "^cargo\\s+check(\\s|$)",
+            },
+          ],
+        },
+      },
+    },
     "default_model": {
       "provider": "openai",
       "model": "gpt-5.3-codex",
       "enable_thinking": true,
-      "effort": "medium"
+      "effort": "medium",
     },
     "flexible": true,
     "favorite_models": [],
-    "model_parameters": []
+    "model_parameters": [],
   },
   "diff_view_style": "unified",
   "lsp": {
@@ -28,28 +78,28 @@
       "settings": {
         "typescript": {
           "updateImportsOnFileMove": {
-            "enabled": "always"
-          }
+            "enabled": "always",
+          },
         },
         "javascript": {
           "updateImportsOnFileMove": {
-            "enabled": "always"
-          }
-        }
+            "enabled": "always",
+          },
+        },
       },
-      "enable_lsp_tasks": true
-    }
+      "enable_lsp_tasks": true,
+    },
   },
   "mouse_wheel_zoom": true,
   "format_on_save": "on",
   "disable_ai": false,
   "project_panel": {
-    "dock": "left"
+    "dock": "left",
   },
   "telemetry": {
     "diagnostics": false,
     "metrics": false,
-    "anthropic_retention": false
+    "anthropic_retention": false,
   },
   "icon_theme": "Catppuccin Mocha",
   "ui_font_size": 19.0,
@@ -57,6 +107,6 @@
   "theme": {
     "mode": "dark",
     "light": "Ayu Light",
-    "dark": "Tokyo Night"
-  }
+    "dark": "Tokyo Night",
+  },
 }
