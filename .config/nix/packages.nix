@@ -88,6 +88,7 @@ in
     appcleaner
     tailscale
     tailscale-gui
+    btop # Activity Monitor in CLI
 
     inputs.silicate.packages.${system}.default
     inputs.clonee.packages.${system}.default
