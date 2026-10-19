@@ -7,15 +7,12 @@
       "sevenzip"
     ];
     casks = [
-      "theboredteam/boring-notch/boring-notch"
       "superwhisper"
       "tunnelblick"
-      "presentify"
       "cotypist"
       "ghostty"
-      "cursor"
-      "yoink"
       "rustdesk"
+      "claude"
     ];
     # Auto deletes any brews/casks that are not specified in the configuration
     onActivation.cleanup = "zap";
