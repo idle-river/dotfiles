@@ -89,6 +89,7 @@ in
     tailscale
     tailscale-gui
     btop # Activity Monitor in CLI
+    utm
 
     inputs.silicate.packages.${system}.default
     inputs.clonee.packages.${system}.default
