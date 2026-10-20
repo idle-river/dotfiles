@@ -42,7 +42,6 @@ in
     typescript
     unzip
     wakeonlan
-    python3
     wget
     xh
     xz
@@ -80,7 +79,6 @@ in
     vesktop
     element-desktop
     aldente
-    tigervnc
     localsend
     moonlight
     wireshark

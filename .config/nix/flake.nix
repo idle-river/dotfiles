@@ -50,17 +50,16 @@
     inputs@{
       self,
       nixpkgs,
-      silicate,
-      clonee,
-      helium,
-      sonara,
       nix-darwin,
       nix-homebrew,
       ...
     }:
+    let
+      username = "Maaz";
+    in
     {
       darwinConfigurations."MacBook-Pro" = nix-darwin.lib.darwinSystem {
-        specialArgs = { inherit inputs; };
+        specialArgs = { inherit inputs username; };
 
         modules = [
           ./configuration.nix
@@ -74,7 +73,7 @@
             nix-homebrew = {
               enable = true;
               enableRosetta = true;
-              user = "Maaz";
+              user = username;
 
               autoMigrate = true;
             };

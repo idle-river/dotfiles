@@ -1,5 +1,4 @@
 if status is-interactive
-
     # Activate Dotenv On CD
     eval (devenv hook fish)
 
@@ -13,7 +12,6 @@ if status is-interactive
     # Aliases
     alias cat /run/current-system/sw/bin/bat
     alias ocat /bin/cat
-    alias docker podman
     alias ls '/run/current-system/sw/bin/eza --icons always'
     alias ols /bin/ls
     alias kubectx 'kubectl config use-context'
@@ -26,6 +24,7 @@ if status is-interactive
     alias update 'nix flake update --flake ~/Dotfiles/.config/nix'
     alias upgrade 'update && nrs'
     alias clean 'sudo nix-collect-garbage -d'
+    alias check 'nix flake check ~/Dotfiles/.config/nix'
 
     # Nix In General
     abbr --add nixos-rebuild 'nix run nixpkgs#nixos-rebuild --'
@@ -44,9 +43,6 @@ end
 # Bun
 set -gx BUN_INSTALL "$HOME/.bun"
 fish_add_path "$BUN_INSTALL/bin"
-
-# Aliases
-alias cea "bunx create-expo-app --no-install"
 
 # Local binaries
 fish_add_path "$HOME/.local/bin"

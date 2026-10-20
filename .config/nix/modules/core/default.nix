@@ -1,4 +1,9 @@
-{ inputs, pkgs, ... }:
+{
+  inputs,
+  pkgs,
+  username,
+  ...
+}:
 
 {
   imports = [ ./system.nix ];
@@ -8,7 +13,7 @@
   ];
 
   programs.fish.enable = true;
-  users.users.Maaz.shell = pkgs.fish;
+  users.users.${username}.shell = pkgs.fish;
 
   nix = {
     gc = {
@@ -22,14 +27,17 @@
 
     };
 
+    optimise.automatic = true;
+
+    nixPath = [ "nixpkgs=${inputs.nixpkgs}" ];
+
     settings = {
       experimental-features = "nix-command flakes";
 
       trusted-users = [
         "root"
-        "Maaz"
+        username
       ];
-      auto-optimise-store = true;
     };
   };
 
@@ -40,13 +48,11 @@
     reattach = true;
   };
 
-  system.primaryUser = "Maaz";
+  system.primaryUser = username;
 
   time.timeZone = "America/Chicago";
 
   nixpkgs.hostPlatform = "aarch64-darwin";
 
   nixpkgs.config.allowUnfree = true;
-
-  nix.nixPath = [ "nixpkgs=${inputs.nixpkgs}" ];
 }

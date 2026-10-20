@@ -13,7 +13,6 @@ in
     environment.systemPackages = with pkgs; [
       uv
       ruff
-      black
       sphinx
       python3
       basedpyright
