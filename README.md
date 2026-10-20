@@ -1,189 +1,127 @@
 # Dotfiles
 
-Personal configuration files for my development environment.
+**A declarative macOS dev environment** — [Nix flakes](https://nixos.wiki/wiki/Flakes) + [nix-darwin](https://github.com/nix-darwin/nix-darwin) for the system, [GNU Stow](https://www.gnu.org/software/stow/) for the configs.
 
+[Wiki](https://github.com/pure-sagacity/dotfiles/wiki) ·
+[Quick start](#-quick-start) ·
+[Daily commands](#️-daily-commands) ·
+[Options](https://github.com/pure-sagacity/dotfiles/wiki/Configuration-Options)
 
-## What this installs
+---
 
-### Nix system packages
+## At a glance
 
-- `neovim` - A modern terminal text editor with strong Lua and plugin support.
-- `pay-respects` - A shell helper that provides command correction abilities
+|                 | Tool                                                                                                              | Notes                                                 |
+| --------------- | ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------- |
+| Shell           | [fish](https://fishshell.com) + [starship](https://starship.rs) + [zoxide](https://github.com/ajeetdsouza/zoxide) | Aliases and functions live in `.config/fish`          |
+| Terminal        | [Ghostty](https://ghostty.org)                                                                                    | Catppuccin Mocha, JetBrains Mono, cursor-smear shader |
+| Editors         | [Neovim](https://neovim.io) ([LazyVim](https://www.lazyvim.org)) · [Zed](https://zed.dev)                         | Catppuccin / Tokyo Night themes                       |
+| Windows         | [AeroSpace](https://nikitabobko.github.io/AeroSpace/guide)                                                        | Tiling WM, `alt` + `hjkl`                             |
+| Multiplexer     | [tmux](https://github.com/tmux-plugins/tpm)                                                                       | Catppuccin, mouse on, windows start at 1              |
+| Version control | [jj](https://docs.jj-vcs.dev) + git                                                                               | Commits signed with GPG                               |
+| Secrets         | Bitwarden SSH agent · GPG · secretspec · Doppler                                                                  | Nothing secret is stored in this repo                 |
+| System          | nix-darwin + [nix-homebrew](https://github.com/zhaofengli-wip/nix-homebrew)                                       | Dock, Finder, Touch ID `sudo`, GC, fonts              |
 
-### Fonts
+> The full list of what gets installed (and what each thing is for) lives in the wiki: **[Packages](https://github.com/pure-sagacity/dotfiles/wiki/Packages)**.
 
-- `nerd-fonts.jetbrains-mono` - JetBrains Mono with patched glyphs for icons and prompt symbols.
+## Repository layout
 
-### Homebrew packages
-
-- `bat` - A `cat` replacement with syntax highlighting and line numbers.
-- `carapace` - Shell completion engine
-- `cmake` - A cross-platform build system generator.
-- `cmatrix` - A Matrix-style terminal animation for fun and demos.
-- `podman` - A daemonless container engine.
-- `podman-compose` - Compose-style orchestration for Podman.
-- `eza` - A feature-rich replacement for `ls`.
-- `fastfetch` - A fast system information summary tool.
-- `fd` - A simpler, faster file search tool.
-- `ffmpeg` - A media conversion and processing toolkit.
-- `fish` - The interactive shell used by this dotfiles setup.
-- `fzf` - A fuzzy finder for files, commands, and interactive selection.
-- `gcc` - The GNU C and C++ compiler toolchain.
-- `gnupg` - Tools for encryption, signing, and key management.
-- `kubernetes-helm` - The package manager for Kubernetes applications.
-- `kubectl` - The Kubernetes command-line client.
-- `lima` - A lightweight Linux VM manager for local development.
-- `minikube` - A local Kubernetes cluster for testing and learning.
-- `nasm` - An assembler commonly used for low-level development.
-- `neovim` - A terminal editor for everyday coding work.
-- `ninja` - A fast build system used by many compiled projects.
-- `nodejs` - The JavaScript runtime used by many tooling workflows.
-- `openssh` - SSH clients and servers for secure remote access.
-- `openssl` - Cryptography libraries and command-line utilities.
-- `pass` - A Unix password manager built around GPG.
-- `pinentry-mac` - A macOS passphrase prompt for GPG operations.
-- `qemu` - Virtualization and emulation for running other systems.
-- `ripgrep` - A fast text search tool for code and logs.
-- `rustup` - The Rust toolchain installer and version manager.
-- `sevenzip` - Archive compression and extraction support.
-- `sqlite` - A small embedded SQL database engine.
-- `starship` - A fast, customizable shell prompt.
-- `stow` - A symlink manager for dotfiles.
-- `tmux` - A terminal multiplexer for persistent sessions.
-- `unzip` - Archive extraction for ZIP files.
-- `wakeonlan` - A utility for sending Wake-on-LAN packets.
-- `wget` - A command-line file downloader.
-- `xh` - A friendly HTTP client for APIs and quick requests.
-- `xz` - Compression utilities for `.xz` archives.
-- `yazi` - A fast terminal file manager.
-- `yt-dlp` - A media downloader for video and audio sites.
-- `zoxide` - A smarter directory jumper that learns frequent paths.
-- `caddy` - A modern web server and reverse proxy.
-
-### Homebrew casks
-
-- `copilot-cli` - GitHub Copilot's command-line companion.
-- `discord` - A chat client for community and team conversations.
-- `ghostty` - A GPU-accelerated terminal emulator.
-- `openclaw` - A macOS utility app for grabbing and managing files.
-- `podman-desktop` - A graphical interface for Podman containers.
-- `rar` - Tools for creating and extracting RAR archives.
-- `slack` - Team chat and collaboration software.
-- `wireshark-app` - A packet capture and network analysis app.
-- `iina` - A polished macOS media player.
-- `localsend` - A local network file-sharing app.
-- `tailscale-app` - The Tailscale VPN client for macOS.
-
-## Requirements
-
-- macOS or Linux
-- `git`
-- `stow` (for symlink management)
-
-## Install
-
-### 1. Clone the repository
-
-```bash
-git clone https://github.com/pure-sagacity/dotfiles.git "$HOME/Dotfiles"
-cd "$HOME/Dotfiles"
+```text
+Dotfiles/
+├── .aerospace.toml            # AeroSpace config   → ~/.aerospace.toml
+└── .config/                   # everything below   → ~/.config/
+    ├── nix/                   # the system: flake + nix-darwin
+    │   ├── flake.nix          #   inputs + the "MacBook-Pro" host
+    │   ├── configuration.nix  #   ⭐ feature toggles live here
+    │   ├── brew.nix           #   Homebrew brews & casks
+    │   └── modules/
+    │       ├── core/          #   nix settings, shell, fonts, macOS defaults
+    │       ├── packages/      #   system packages, split by category
+    │       ├── development/   #   per-language toggles (macbook.development.*)
+    │       ├── aerospace/     #   tiling WM settings
+    │       └── tailscale/     #   tailscaled service (currently not imported)
+    ├── fish/                  # config.fish, functions/, conf.d/
+    ├── ghostty/  nvim/  tmux/  zed/  jj/  git/  herdr/  secretspec/  ...
 ```
 
-### 2. Back up existing config
+More detail: **[Repository Layout](https://github.com/pure-sagacity/dotfiles/wiki/Repository-Layout)** · **[Nix Configuration](https://github.com/pure-sagacity/dotfiles/wiki/Nix-Configuration)**
+
+## Quick start
+
+Apple Silicon Mac required (`aarch64-darwin` is hard-coded in [`modules/core`](.config/nix/modules/core/default.nix)).
+
+**1. Install Nix**
 
 ```bash
-mkdir -p "$HOME/.config-backup"
-for dir in .config/*; do
-	name="$(basename "$dir")"
-	if [ -e "$HOME/.config/$name" ] || [ -L "$HOME/.config/$name" ]; then
-		mv "$HOME/.config/$name" "$HOME/.config-backup/$name"
-	fi
-done
-```
-
-### 3. Symlink configs
-
-```bash
-stow .
-```
-
-If you are setting up a brand-new Mac, use the `On a new machine` section below instead of this older short form.
-
-
-## On a new machine
-
-This is the exact path from a clean Apple Mac to a fully configured setup.
-
-### 1. Install Nix
-
-This repository uses Nix flakes and nix-darwin, so Nix must be installed before the first activation.
-
-```zsh
 curl -fsSL https://install.determinate.systems/nix | sh -s -- install
 ```
 
-Restart the terminal after the installer finishes.
+Restart the terminal afterwards.
 
-### 2. Clone this repository
+**2. Clone and link**
 
 ```bash
 git clone https://github.com/pure-sagacity/dotfiles.git "$HOME/Dotfiles"
 cd "$HOME/Dotfiles"
-```
 
-### 3. Link the config directories
-
-If you are starting from a clean machine, there is nothing to back up. If you already have files under `~/.config`, move them aside before linking.
-
-```bash
+# Move existing configs aside so stow doesn't conflict
 mkdir -p "$HOME/.config-backup"
 for dir in .config/*; do
-	name="$(basename "$dir")"
-	if [ -e "$HOME/.config/$name" ] || [ -L "$HOME/.config/$name" ]; then
-		mv "$HOME/.config/$name" "$HOME/.config-backup/$name"
-	fi
+  name="$(basename "$dir")"
+  if [ -e "$HOME/.config/$name" ] || [ -L "$HOME/.config/$name" ]; then
+    mv "$HOME/.config/$name" "$HOME/.config-backup/$name"
+  fi
 done
 
 stow .
 ```
 
-### 4. Activate nix-darwin for the first time
-
-Use the flake directly for the first bootstrap. Replace `MacBook-Pro` with your host name if you change it in [.config/nix/flake.nix](.config/nix/flake.nix). **Make sure to add the required `--extra-experimental-features` flag for both `nix-command` and `flakes` if you haven't set it in your Nix config.**
+**3. First activation**
 
 ```bash
-nix run nix-darwin -- switch --flake "$HOME/Dotfiles/.config/nix#MacBook-Pro"
+nix --extra-experimental-features 'nix-command flakes' \
+  run nix-darwin -- switch --flake "$HOME/Dotfiles/.config/nix#MacBook-Pro"
 ```
 
-After that first run, the normal rebuild path is:
+From then on, use the `nrs` alias below. If you rename the host or user, edit [`flake.nix`](.config/nix/flake.nix).
 
-```bash
-sudo darwin-rebuild switch --flake "$HOME/Dotfiles/.config/nix#MacBook-Pro"
+## Daily commands
+
+Defined in [`.config/fish/config.fish`](.config/fish/config.fish):
+
+| Alias     | Does                                               |
+| --------- | -------------------------------------------------- |
+| `nrs`     | `darwin-rebuild switch` — apply the current config |
+| `update`  | `nix flake update` — bump flake inputs             |
+| `upgrade` | `update` then `nrs`                                |
+| `check`   | `nix flake check`                                  |
+| `clean`   | `nix-collect-garbage -d`                           |
+
+> Flakes only see **git-tracked** files — `git add` any new `.nix` file before running `nrs`.
+
+More aliases, functions, and env vars: **[Shell & Aliases](https://github.com/pure-sagacity/dotfiles/wiki/Shell-and-Aliases)**.
+
+## Turning things on and off
+
+Language toolchains are toggles in [`configuration.nix`](.config/nix/configuration.nix):
+
+```nix
+macbook.development = {
+  enable = true;
+  rust.enable = true;
+  python.enable = true;
+  go.enable = true;
+  js.enable = true;
+  c = { enable = true; gui.enable = false; };
+  zig.enable = false;
+  arduino.enable = false;
+};
 ```
 
-### 7. Daily workflow
-
-After the first bootstrap, the shell aliases in [.config/fish/config.fish](.config/fish/config.fish) provide the normal maintenance commands:
-
-```bash
-update
-rebuild
-upgrade
-```
-
-`update` refreshes the flake inputs, `rebuild` applies the current system config, and `upgrade` does both in one step.
-
-
-## Update
-
-```bash
-cd "$HOME/Dotfiles"
-git pull
-```
-
-If new config directories were added, run the symlink step again.
+Every option is documented in **[Configuration Options](https://github.com/pure-sagacity/dotfiles/wiki/Configuration-Options)**.
 
 ## Notes
 
-- Keep machine-specific secrets out of this repository.
-- If a tool behaves unexpectedly after linking, restore from `.config-backup` and re-link that tool manually.
+- Keep machine-specific secrets out of this repo (`raycast/` and `.kube/` are git-ignored).
+- If a tool misbehaves after linking, restore it from `~/.config-backup` and re-link that tool manually.
+- To pull changes later: `cd ~/Dotfiles && git pull`, then `stow .` again if new config folders were added.
