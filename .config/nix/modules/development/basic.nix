@@ -11,13 +11,16 @@ in
 {
   config = lib.mkIf cfg.enable {
     environment.systemPackages = with pkgs; [
-      neovim
-      jujutsu
+      devenv
       fd
-      tmux
+      gh
+      jujutsu
+      neovim
       nixd
       nixfmt
       nixfmt-tree
+      opencode
+      tmux
     ];
   };
 }

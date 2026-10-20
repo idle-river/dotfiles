@@ -1,6 +1,6 @@
 {
   imports = [
-    ./packages.nix
+    ./modules/packages
     ./brew.nix
     ./modules/core
     ./modules/aerospace
@@ -16,6 +16,8 @@
       gui.enable = false;
     };
     python.enable = true;
+    go.enable = true;
+    js.enable = true;
     arduino.enable = false;
   };
 }

@@ -19,6 +19,6 @@ in
         nasm
         pkg-config
       ]
-      ++ lib.optionals c.gui.enable [ glfw ];
+      ++ lib.optionals cfg.c.gui.enable [ glfw ];
   };
 }
