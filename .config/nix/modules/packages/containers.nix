@@ -13,5 +13,6 @@
     podman-tui
     qemu
     utm
+    container
   ];
 }
