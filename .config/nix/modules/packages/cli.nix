@@ -23,5 +23,6 @@
     yazi
     yt-dlp
     zoxide
+    codecrafters-cli
   ];
 }
