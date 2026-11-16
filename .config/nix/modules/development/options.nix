@@ -17,7 +17,5 @@ with lib;
 
     go.enable = mkEnableOption "Go development tools";
     js.enable = mkEnableOption "JavaScript/TypeScript development tools (node, bun, tsc)";
-
-    arduino.enable = mkEnableOption "Arduino development IDE and CLI";
   };
 }

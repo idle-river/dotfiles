@@ -1,4 +1,9 @@
-{ inputs, pkgs, ... }:
+{
+  inputs,
+  horizon,
+  pkgs,
+  ...
+}:
 
 let
   system = pkgs.stdenv.hostPlatform.system;
@@ -8,6 +13,15 @@ let
     mkdir -p "$out/bin"
     ln -s "${pkgs.zed-editor}/bin/zeditor" "$out/bin/zed"
   '';
+
+  horizonClient = horizon.packages.${system}.horizon-client.overrideAttrs (old: {
+    cargoBuildFlags = [
+      "--package=horizon-game"
+      "--bin=horizon-client"
+      "--package=horizon-client-lib"
+      "--bin=horizon-ctl"
+    ];
+  });
 
   tableplus = (
     inputs.tableplus.packages.${system}.default or inputs.tableplus.defaultPackage.${system}
@@ -32,5 +46,6 @@ in
     whatcable
     zed-editor
     zedCompat
+    horizonClient
   ];
 }

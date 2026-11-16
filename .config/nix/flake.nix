@@ -10,40 +10,14 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    silicate = {
-      url = "github:idle-river/silicate";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
-    clonee = {
-      url = "github:idle-river/clonee";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
-    aegis = {
-      url = "github:idle-river/aegis";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
-    opal = {
-      url = "github:idle-river/opal";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
-    helium = {
-      url = "github:schembriaiden/helium-browser-nix-flake";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
-    tableplus = {
-      url = "github:anaclumos/tableplus.nix";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
-    sonara = {
-      url = "github:nolight132/sonora";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    silicate.url = "github:idle-river/silicate";
+    clonee.url = "github:idle-river/clonee";
+    aegis.url = "github:idle-river/aegis";
+    opal.url = "github:idle-river/opal";
+    helium.url = "github:schembriaiden/helium-browser-nix-flake";
+    tableplus.url = "github:anaclumos/tableplus.nix";
+    sonara.url = "github:nolight132/sonora";
+    horizon.url = "github:horizon-rust/horizon";
   };
 
   outputs =
@@ -52,6 +26,7 @@
       nixpkgs,
       nix-darwin,
       nix-homebrew,
+      horizon,
       ...
     }:
     let
@@ -59,7 +34,7 @@
     in
     {
       darwinConfigurations."MacBook-Pro" = nix-darwin.lib.darwinSystem {
-        specialArgs = { inherit inputs username; };
+        specialArgs = { inherit inputs username horizon; };
 
         modules = [
           ./configuration.nix

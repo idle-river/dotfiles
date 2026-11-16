@@ -18,6 +18,5 @@
     python.enable = true;
     go.enable = true;
     js.enable = true;
-    arduino.enable = false;
   };
 }

@@ -19,7 +19,7 @@ in
       nixd
       nixfmt
       nixfmt-tree
-      opencode
+      claude-code
       tmux
     ];
   };
