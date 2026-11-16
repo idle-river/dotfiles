@@ -1,4 +1,9 @@
 [[provider]]
 type = "github"
-friendly_name = "Github (Personal)"
+friendly_name = "Github"
 username = "idle-river"
+
+[[provider]]
+type = "github"
+friendly_name = "Github (Dotfiles)"
+username = "idles-dotfiles"

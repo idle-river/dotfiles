@@ -95,7 +95,7 @@ gui.show_bytes_show: ASCII
 
 # Main window upper (or leftmost) pane size.
 # Decimal number.
-gui.geometry_main_upper_pane: 274
+gui.geometry_main_upper_pane: 283
 
 # Main window middle pane size.
 # Decimal number.

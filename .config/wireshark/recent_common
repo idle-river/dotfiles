@@ -7,6 +7,7 @@
 ######## Recent capture files (latest last), cannot be altered through command line ########
 
 recent.capture_file: /Users/Maaz/Downloads/0.pcap
+recent.capture_file: /Users/Maaz/Downloads/br0.pcap
 
 ######## Recent capture filters (latest first), cannot be altered through command line ########
 
@@ -20,7 +21,7 @@ recent.display_filter: _ws.col.protocol == "FTP"
 gui.geometry_main_x: 564
 gui.geometry_main_y: 324
 gui.geometry_main_width: 1052
-gui.geometry_main_height: 646
+gui.geometry_main_height: 663
 
 # Main window maximized.
 # true or false (case-insensitive).
@@ -28,7 +29,7 @@ gui.geometry_main_maximized: false
 
 # Main window geometry state.
 # Hex byte string.
-gui.geometry_main: 01d9d0cb0003000000000234000001440000064f000003e500000234000001600000064f000003e50000000000000000070800000234000001600000064f000003e5
+gui.geometry_main: 01d9d0cb0003000000000234000001440000064f000003f600000234000001600000064f000003f60000000000000000070800000234000001600000064f000003f6
 
 # Leftalign Action Buttons.
 # true or false (case-insensitive).
