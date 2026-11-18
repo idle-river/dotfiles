@@ -17,7 +17,7 @@
     helium.url = "github:schembriaiden/helium-browser-nix-flake";
     tableplus.url = "github:anaclumos/tableplus.nix";
     sonara.url = "github:nolight132/sonora";
-    horizon.url = "github:horizon-rust/horizon";
+    misfortune.url = "github:tragedy-mc/misfortune-releases";
   };
 
   outputs =
@@ -26,7 +26,6 @@
       nixpkgs,
       nix-darwin,
       nix-homebrew,
-      horizon,
       ...
     }:
     let
@@ -34,7 +33,7 @@
     in
     {
       darwinConfigurations."MacBook-Pro" = nix-darwin.lib.darwinSystem {
-        specialArgs = { inherit inputs username horizon; };
+        specialArgs = { inherit inputs username; };
 
         modules = [
           ./configuration.nix

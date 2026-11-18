@@ -12,5 +12,6 @@ in
     "opal"
     "silicate"
     "sonara"
+    "misfortune"
   ];
 }
